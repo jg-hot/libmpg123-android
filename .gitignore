@@ -1,0 +1,23 @@
+# configure output
+Makefile
+config.h
+config.log
+config.status
+libtool
+*.pc
+.deps/
+stamp-h1
+
+# make output
+*.lo
+*.la
+*.o
+.libs/
+.dirstamp
+src/mpg123
+src/mpg123-id3dump
+src/mpg123-strip
+src/out123
+
+# android build output
+build/android/
