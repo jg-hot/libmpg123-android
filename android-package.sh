@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-LIB_NAME="mpg123"
+LIB_NAME="libmpg123"
 ABIS=("armeabi-v7a" "arm64-v8a" "x86" "x86_64")
 
 BUILD_DIR="./build/android"
@@ -20,7 +20,7 @@ pushd "$BUILD_DIR"
 
     # copy libraries
     for ABI in ${ABIS[@]}; do
-        cp -vt "aar/prefab/modules/$LIB_NAME/libs/android.$ABI/" "$ABI/lib/lib${LIB_NAME}.so"
+        cp -vt "aar/prefab/modules/$LIB_NAME/libs/android.$ABI/" "$ABI/lib/libmpg123.so"
     done
 
     # verify prefab package
@@ -46,7 +46,8 @@ pushd "$BUILD_DIR"
     done
 popd
 
-AAR_NAME="mpg123-1.32.9-android-r1.aar"
+AAR_NAME="mpg123-android-1.32.9-android-r1.aar"
+rm -f "$BUILD_DIR/$AAR_NAME"
 
 # zip prefab/ and AndroidManifest.xml into an .aar
 cp -vt "$BUILD_DIR/aar/" android/AndroidManifest.xml

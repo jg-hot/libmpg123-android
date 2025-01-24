@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.mpg123</groupId>
-  <artifactId>mpg123</artifactId>
+  <artifactId>mpg123-android</artifactId>
   <version>1.32.9-android-r1</version>
   <packaging>aar</packaging>
 </project>
